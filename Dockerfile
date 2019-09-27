@@ -1,9 +1,9 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0 AS build-env
+FROM mcr.microsoft.com/dotnet/core/runtime:3.0
 WORKDIR /app
 
 # Copy csproj and restore as distinct layers
-COPY *.csproj ./
-RUN dotnet restore
+COPY bin/Debug/netcoreapp3.0/didactic-fortnight.dll ./
+RUN dotnet didactic-fortnight.dll
 
 # Copy everything else and build
 COPY . ./
