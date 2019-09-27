@@ -22,3 +22,6 @@ jobs:
 
     - name: run
       run: dotnet bin/Debug/netcoreapp3.0/didactic-fortnight.dll
+
+    - name: docker
+      run: docker build
